@@ -1,0 +1,3 @@
+hoge:
+    abcd: "This is yaml file!"
+    efgh: 12345
