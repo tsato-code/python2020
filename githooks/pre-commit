@@ -1,0 +1,25 @@
+#!/bin/sh
+
+echo start pytest
+
+pytest
+
+if [ $? -eq 0 ] ; then
+    echo "* * * success! * * *"
+else
+    echo "* * * failed! * * *"
+    exit 1
+fi
+
+echo start flake8
+flake8
+
+if [ $? -eq 0 ] ; then
+    echo "* * * success! * * *"
+else
+    echo "* * * failed! * * *"
+    exit 1
+fi
+
+
+exit 0
